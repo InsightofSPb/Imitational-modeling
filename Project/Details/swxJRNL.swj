@@ -1,0 +1,517 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 12/25/22 by Alex
+' *****************************************************************************
+Dim swApp As Object
+
+Dim Part As Object
+Dim boolstatus As Boolean
+Dim longstatus As Long, longwarnings As Long
+
+Sub main()
+
+Set swApp = Application.SldWorks
+
+swApp.ActivateDoc2 "Project_sb.SLDASM", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Dim myModelView As Object
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+
+' Redraw
+Part.GraphicsRedraw2
+
+' Redraw
+Part.GraphicsRedraw2
+boolstatus = Part.Extension.SelectByRay(-0.173073482843471016, 0, 0.2630581560178228973, 0, 1, 0, 0.004371192269489951494, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", -0.173073482843471016, 0, 0.2630581560178228973, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Tire.stp-5@Project_sb", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+Dim TransformData() As Double
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = -0.6075834500472103716
+TransformData(1) = 0
+TransformData(2) = 0.7942558474627234855
+TransformData(3) = 0
+TransformData(4) = 1
+TransformData(5) = 0
+TransformData(6) = -0.7942558474627234855
+TransformData(7) = 0
+TransformData(8) = -0.6075834500472103716
+TransformData(9) = -0.003315259330108291051
+TransformData(10) = 0
+TransformData(11) = 0.03189319066590638047
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+Dim TransformDataVariant As Variant
+TransformDataVariant = TransformData
+Dim swMathUtil As Object
+Set swMathUtil = swApp.GetMathUtility()
+Dim swTransform As Object
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Dim swComp As Object
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+boolstatus = Part.Extension.SelectByRay(-0.1370754288594362436, 0, -0.2936260359495738714, 0, 1, 0, 0.004371192269489951494, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", -0.1370754288594362436, 0, -0.2936260359495738714, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Tire.stp-6@Project_sb", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = -0.4947709733736554982
+TransformData(1) = 0
+TransformData(2) = -0.8690234081466884364
+TransformData(3) = 0
+TransformData(4) = 1
+TransformData(5) = 0
+TransformData(6) = 0.8690234081466884364
+TransformData(7) = 0
+TransformData(8) = -0.4947709733736554982
+TransformData(9) = -0.001369083607884243698
+TransformData(10) = 0
+TransformData(11) = -0.0002731794595177933042
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByRay(0.2717596128163888292, 0, 0.2977705652167136896, 0, 1, 0, 0.0005142579140576413778, 2, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.2717596128163888292, 0, 0.2977705652167136896, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Tire.stp-3@Project_sb", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 0.9999780172106103038
+TransformData(1) = 0
+TransformData(2) = -0.006630618035799747297
+TransformData(3) = 0
+TransformData(4) = 1
+TransformData(5) = 0
+TransformData(6) = 0.006630618035799731684
+TransformData(7) = 0
+TransformData(8) = 0.9999780172106103038
+TransformData(9) = -0.001811867444419186556
+TransformData(10) = 0
+TransformData(11) = 0.0005356131249794828138
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+boolstatus = Part.Extension.SelectByRay(-0.2836389343658638484, 0, 0.3170552369938752224, 0, 1, 0, 0.004371192269489951494, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", -0.2836389343658638484, 0, 0.3170552369938752224, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Tire.stp-5@Project_sb", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = -0.5012035774016772027
+TransformData(1) = 0
+TransformData(2) = 0.8653294020196938829
+TransformData(3) = 0
+TransformData(4) = 1
+TransformData(5) = 0
+TransformData(6) = -0.8653294020196938829
+TransformData(7) = 0
+TransformData(8) = -0.5012035774016772027
+TransformData(9) = 0.0004543144140846644939
+TransformData(10) = 0
+TransformData(11) = 0.0001649156895715997613
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByRay(-0.2142141159680823748, 0, 0.3414824879116132306, 0, 1, 0, 0.004371192269489951494, 1, True, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.3103289563707118948, 0, -0.2473428236843861205, 0, 1, 0, 0.0005142579140576413778, 2, True, 0, 0)
+boolstatus = Part.Extension.SelectByID2("Point1@Исходная точка", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByRay(0.210048663129471791, 0, 0.1306367431479802665, 0, 1, 0, 0.004371192269489951494, 1, True, 0, 0)
+boolstatus = Part.Extension.SelectByID2("Point1@Исходная точка", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Неизвестный", "POINTREF", 0.2151313553349679386, 0.02500000000000000139, 0.1242061459137729779, True, 0, Nothing, 0)
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+boolstatus = Part.Extension.SelectByID2("Point1@Origin@link2.stp-2@Project_sb", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Point1@Origin@link2.stp-2@Project_sb", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByRay(0.2079384293375435844, 0, 0.1085856554686703557, 0, 1, 0, 0.002858429556480036968, 2, True, 0, 0)
+boolstatus = Part.Extension.SelectByID2("Неизвестный", "POINTREF", 0.2113367492367466682, 0, 0.1048555036142199137, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Point1@Origin@link2.stp-2@Project_sb", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Point1@Исходная точка", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Point1@Исходная точка", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByRay(0.05787581102639749453, 0, 0.3128721633894833709, 0, 1, 0, 0.00233476374028368126, 2, True, 0, 0)
+boolstatus = Part.Extension.SelectByID2("Point1@Исходная точка", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Point1@Исходная точка", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0)
+Part.EditDelete
+boolstatus = Part.Extension.SelectByID2("Point1@Исходная точка", "EXTSKETCHPOINT", 0, 0, 0, False, 0, Nothing, 0)
+Part.EditDelete
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Point1@Origin@link2.stp-2@Project_sb", "EXTSKETCHPOINT", 0, 0, 0, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByRay(0.2093616421868171318, 0, 0.103322874454469027, 0, 1, 0, 0.00233476374028368126, 3, True, 0, 0)
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+boolstatus = Part.Extension.SelectByRay(-0.02727439597218384026, 0, 0.04162755238593805057, 0, 1, 0, 0.00233476374028368126, 1, True, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.03246808797036915273, 0, -0.03665570243533829847, 0, 1, 0, 0.00233476374028368126, 1, True, 0, 0)
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0, 0.01482549342143501397, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.006872233929727688227, 0, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.003436116964863844114, -0.02965098684287002795, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.01030835089459153364, -0.03706373355358753147, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.01030835089459153364, -0.03706373355358753147, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.01030835089459153364, -0.03706373355358753147, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.01374446785945537645, -0.02965098684287002795, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.02061670178918306728, -0.04447648026430504192, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.01718058482431921927, -0.0593019736857400559, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.02061670178918306728, -0.0593019736857400559, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.02405281875404690836, -0.07412746710717506293, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.02061670178918306728, -0.05188922697502254544, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.01718058482431921927, -0.03706373355358753147, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.01374446785945537645, -0.0593019736857400559, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.003436116964863844114, -0.02965098684287002795, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.003436116964863844114, -0.02965098684287002795, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.006872233929727688227, 0, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.003436116964863844114, -0.01482549342143501397, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0, -0.01482549342143501397, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0, -0.007412746710717506987, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0, -0.007412746710717506987, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.006872233929727688227, -0.02223824013215252096, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.003436116964863844114, -0.01482549342143501397, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.003436116964863844114, -0.007412746710717506987, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.003436116964863844114, -0.02223824013215252096, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0, -0.007412746710717506987, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.003436116964863844114, -0.007412746710717506987, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0, -0.007412746710717506987, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0, -0.007412746710717506987, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.006872233929727688227, -0.007412746710717506987, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0, 0.007412746710717506987, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0, 0.007412746710717506987, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0, 0.007412746710717506987, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0, 0.007412746710717506987, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0, 0.007412746710717506987, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0, 0.007412746710717506987, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint -0.003436116964863844114, 0, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0, 0.007412746710717506987, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint -0.003436116964863844114, 0, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint -0.006872233929727688227, 0, 0.0997642193079576467, 0.02499999999974988896, 0.04368763803912945054
+
+' Roll View
+Dim swModelView As Object
+Set swModelView = Part.ActiveView
+swModelView.RollBy 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint -0.1855503161026475778, 0.6374962171217055662, 0.1285756971516320846, 0, -0.06503816518966232252
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint -0.02061670178918306728, 0.07412746710717506293, 0.1285756971516320846, 0, -0.06503816518966232252
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint -0.01718058482431921927, 0.0593019736857400559, 0.1285756971516320846, 0, -0.06503816518966232252
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint -0.02061670178918306728, 0.06671472039645755248, 0.1285756971516320846, 0, -0.06503816518966232252
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint -0.006872233929727688227, 0.04447648026430504192, 0.1285756971516320846, 0, -0.06503816518966232252
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint -0.003436116964863844114, 0, 0.1285756971516320846, 0, -0.06503816518966232252
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint -0.003436116964863844114, 0, 0.1285756971516320846, 0, -0.06503816518966232252
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.003436116964863844114, 0, 0.1285756971516320846, 0, -0.06503816518966232252
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.006872233929727688227, 0, 0.1285756971516320846, 0, -0.06503816518966232252
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutPoint 0.006872233929727688227, 0, 0.1285756971516320846, 0, -0.06503816518966232252
+
+' Roll View
+Set swModelView = Part.ActiveView
+swModelView.RollBy 0
+boolstatus = Part.Extension.SelectByRay(0.0494325823161432254, -0.0001095283233780719456, 0.2941729308750993255, 0.1731511372636083679, 0.9837635454255471146, 0.04720138087044395414, 0.00233476374028368126, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.0494325823161432254, -0.0001095283233780719456, 0.2941729308750993255, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("link2.stp-2@Project_sb", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 0
+TransformData(1) = -1
+TransformData(2) = 0
+TransformData(3) = -0.6112216121694137305
+TransformData(4) = 0
+TransformData(5) = 0.7914595004275473134
+TransformData(6) = -0.7914595004275474244
+TransformData(7) = 0
+TransformData(8) = -0.6112216121694138415
+TransformData(9) = -0.007886996095413507241
+TransformData(10) = 0.02500000000000003955
+TransformData(11) = 0.3886674594507122382
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+boolstatus = Part.Extension.SelectByRay(-0.004161790652901231624, 0, 0.008473596841874098118, 0.1731511372636083679, 0.9837635454255471146, 0.04720138087044395414, 0.00233476374028368126, 2, False, 0, 0)
+Part.ClearSelection2 True
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+boolstatus = Part.Extension.SelectByRay(0.2739136559070325383, 0, -0.2902012993160033583, 0, 1, 0, 0.0005013873958293027684, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.2739136559070325383, 0, -0.2902012993160033583, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Tire.stp-6@Project_sb", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = -0.02434199833879473196
+TransformData(1) = 0
+TransformData(2) = -0.9997036896585278498
+TransformData(3) = 0
+TransformData(4) = 1
+TransformData(5) = 0
+TransformData(6) = 0.9997036896585278498
+TransformData(7) = 0
+TransformData(8) = -0.02434199833879473196
+TransformData(9) = -0.07084849376107282826
+TransformData(10) = 0
+TransformData(11) = -0.1015373227182107957
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+boolstatus = Part.Extension.SelectByRay(0.2826879353340452372, 0, 0.2838872689085482626, 0, 1, 0, 0.004261792864549073315, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.2826879353340452372, 0, 0.2838872689085482626, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Tire.stp-3@Project_sb", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 0.902439820024383943
+TransformData(1) = 0
+TransformData(2) = 0.430815936606757377
+TransformData(3) = 0
+TransformData(4) = 1
+TransformData(5) = 0
+TransformData(6) = -0.430815936606757377
+TransformData(7) = 0
+TransformData(8) = 0.902439820024383943
+TransformData(9) = 0.1095952302607551415
+TransformData(10) = 0
+TransformData(11) = -0.01447265895739737948
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+boolstatus = Part.Extension.SelectByRay(-0.3628483367961820028, 0, 0.1735820418261015963, 0, 1, 0, 0.004261792864549073315, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", -0.3628483367961820028, 0, 0.1735820418261015963, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Tire.stp-5@Project_sb", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = -0.8685824137476989559
+TransformData(1) = 0
+TransformData(2) = 0.4955447411972215832
+TransformData(3) = 0
+TransformData(4) = 1
+TransformData(5) = 0
+TransformData(6) = -0.4955447411972216387
+TransformData(7) = 0
+TransformData(8) = -0.8685824137476989559
+TransformData(9) = -0.05848682956865300375
+TransformData(10) = 0
+TransformData(11) = 0.1172710709246333471
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+Part.ClearSelection2 True
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+boolstatus = Part.Extension.SelectByRay(-0.3533609453071586692, 0, -0.1416251871509731086, 0, 1, 0, 0.005073320052382214972, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", -0.3533609453071586692, 0, -0.1416251871509731086, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Tire.stp-5@Project_sb", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = -0.4888991476269431979
+TransformData(1) = 0
+TransformData(2) = 0.8723403140114807108
+TransformData(3) = 0
+TransformData(4) = 1
+TransformData(5) = 0
+TransformData(6) = -0.8723403140114807108
+TransformData(7) = 0
+TransformData(8) = -0.4888991476269431979
+TransformData(9) = 0.0004128217462161052481
+TransformData(10) = 0
+TransformData(11) = -0.003369327774032478823
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+boolstatus = Part.Extension.SelectByRay(-0.03553236555497885085, 0, 0.3597382062609164599, 0, 1, 0, 0.005073320052382214972, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", -0.03553236555497885085, 0, 0.3597382062609164599, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Tire.stp-3@Project_sb", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 0.9991239930819385551
+TransformData(1) = 0
+TransformData(2) = 0.04184789657799218437
+TransformData(3) = 0
+TransformData(4) = 1
+TransformData(5) = 0
+TransformData(6) = -0.04184789657799218437
+TransformData(7) = 0
+TransformData(8) = 0.9991239930819385551
+TransformData(9) = 0.008850036553856979737
+TransformData(10) = 0
+TransformData(11) = -0.005187358442377516116
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SketchBoxSelect("0.000000", "0.000000", "0.000000", "0.000000", "0.000000", "0.000000")
+boolstatus = Part.Extension.SelectByRay(0.3210921910683592895, 0, -0.1446094930641391163, 0, 1, 0, 0.005073320052382214972, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.3210921910683592895, 0, -0.1446094930641391163, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Tire.stp-6@Project_sb", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = -0.5020853197205463747
+TransformData(1) = 0
+TransformData(2) = -0.8648180916939217644
+TransformData(3) = 0
+TransformData(4) = 1
+TransformData(5) = 0
+TransformData(6) = 0.8648180916939217644
+TransformData(7) = 0
+TransformData(8) = -0.5020853197205463747
+TransformData(9) = 0.0004524118986399098836
+TransformData(10) = 0
+TransformData(11) = 0.0007833405328181271754
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+boolstatus = Part.Extension.SelectByRay(0.401668450723841497, 0, 0.08070560337989457489, 0, 1, 0, 0.005073320052382214972, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.401668450723841497, 0, 0.08070560337989457489, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Tire.stp-3@Project_sb", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 0.999830412273947422
+TransformData(1) = 0
+TransformData(2) = 0.01841593581952315553
+TransformData(3) = 0
+TransformData(4) = 1
+TransformData(5) = 0
+TransformData(6) = -0.01841593581952314165
+TransformData(7) = 0
+TransformData(8) = 0.999830412273947422
+TransformData(9) = 0.003631139056412103095
+TransformData(10) = 0
+TransformData(11) = -0.002538390711436802876
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+Part.ClearSelection2 True
+' MSGBOX
+' Сохранить изменения в файле Project_sb.SLDASM?
+
+swApp.ExitApp
+End Sub
